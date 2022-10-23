@@ -239,6 +239,18 @@ namespace CustomControls.Controls
 
             return answerReturn;
         }
+
+        public static DialogResult Show(string mensaje, Icono icono)
+        {
+            Msg msg = new Msg(mensaje, "", Btns.Aceptar, icono, Themes.Themes.GetThemeExcel());
+            msg.ShowDialog();
+            msg.Dispose();
+
+            DialogResult answerReturn = answer;  // Para que no se pueda cerrar la ventana del mensaje
+            answer = DialogResult.None;
+
+            return answerReturn;
+        }
     }
 
     //Metodos

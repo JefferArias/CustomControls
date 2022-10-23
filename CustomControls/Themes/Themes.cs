@@ -29,9 +29,6 @@ namespace CustomControls.Themes
             var valTheme = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common", "UI Theme", "9");
             switch (valTheme)
             {
-                case 0:
-                    return Tema.Multicolor;
-
                 case 3:
                     return Tema.Gris;
 
@@ -51,8 +48,11 @@ namespace CustomControls.Themes
                             return Tema.Multicolor;
                     }
                                         
+                case 7:
+                    return Tema.Multicolor;
+
                 default:
-                    return Tema.Negro;
+                    return Tema.Multicolor;
 
             }
         }

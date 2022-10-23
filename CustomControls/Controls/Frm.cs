@@ -217,7 +217,6 @@ namespace CustomControls.Controls
     //Metodos
     public partial class Frm
     {
-
         public new void Dispose()
         {
             for (int i = 0; i < controls.Count; i++)
